@@ -1,0 +1,8 @@
+.venv
+*.egg-info
+build
+.vscode
+db.sqlite3
+**/__pycache__
+**/migrations/*.py 
+**/migrations/__init__.py 
