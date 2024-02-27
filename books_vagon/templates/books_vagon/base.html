@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Vagon - Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    {% block body %}
+    <div class="min-vh-100 d-flex flex-column justify-content-between">
+      <div>
+        <nav class="py-2 bg-body-tertiary border-bottom">
+          <div class="container d-flex flex-wrap">
+            <ul class="nav me-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link link-body-emphasis px-2 active" aria-current="page">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link link-body-emphasis px-2">Авторы</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link link-body-emphasis px-2">Книги</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link link-body-emphasis px-2">Мои отзывы</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link link-body-emphasis px-2">О сайте</a>
+              </li>
+            </ul>
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="{{ url("mailauth:login") }}" class="nav-link link-body-emphasis px-2">Войти</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link link-body-emphasis px-2">Зарегистрироваться</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <header class="py-3 border-bottom">
+          <div class="container d-flex flex-wrap justify-content-between">
+            <a href="/" class="d-flex align-items-center mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+              <i class="fa-solid fa-book-open m-3"></i>
+              <span class="fs-4">Books Vagon</span>
+            </a>
+            <div class="d-flex align-items-center">
+
+                <form class="col-12 col-lg-auto mb-lg-0 me-3" role="search">
+                  <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Поиск..." aria-label="Search" />
+                    <button class="btn btn-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+                </form>
+                <div>
+                    <a href="#" class="text-secondary me-2"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#" class="text-secondary"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+            </div>
+          </div>
+        </header>
+        <nav aria-label="breadcrumb">
+          <div class="container">
+            <ol class="breadcrumb p-3 bg-body-tertiary rounded-bottom-3">
+              <li class="breadcrumb-item">
+                <a class="link-body-emphasis" href="#">
+                  <i class="fa-solid fa-house"></i>
+                  <span class="visually-hidden">Home</span>
+                </a>
+              </li>
+              <li class="breadcrumb-item">
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Library</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Books Vagon, Inc</span>
+          </div>
+
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="text-body-secondary" href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="ms-3">
+              <a class="text-body-secondary" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    {% endblock body %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    {% block scripts %}
+
+    {% endblock %}
+  </body>
+</html>

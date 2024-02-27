@@ -1,0 +1,8 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+  <form method="post" class="form">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}" />
+    {{ bootstrap_form(form, layout = 'floating') }}
+  </form>
+{% endblock %}

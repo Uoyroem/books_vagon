@@ -2,8 +2,8 @@
 name = "books_vagon"
 version = "0.1"
 requires-python = "~=3.10"
-dependencies = [
-    "Django",
-    "Jinja2"
-]
+dependencies = ["Django", "Jinja2", "django-mail-auth", "django-bootstrap5"]
 
+
+[tool.setuptools]
+py-modules = []
